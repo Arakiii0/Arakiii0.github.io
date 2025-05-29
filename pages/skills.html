@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Cybersecurity Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav id="navbar">
+            <div class="logo">
+                <a href="../index.html">CyberSec<span>Portfolio</span></a>
+            </div>
+            <div class="nav-toggle">
+                <span class="hamburger"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="skills.html" class="nav-link active">Skills</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="achievements.html" class="nav-link">Achievements</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">Certifications</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="school-certifications.html">School Certifications</a></li>
+                        <li><a href="industry-certifications.html">Industry Certifications</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html" class="nav-link contact-btn">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Skills</h1>
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> / <span>Skills</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Categories Section -->
+        <section class="skills-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Technical Expertise</h2>
+                    <div class="underline"></div>
+                </div>
+                
+                <div class="skills-tabs">
+                    <button class="skills-tab active" data-category="offensive">Offensive Security</button>
+                    <button class="skills-tab" data-category="defensive">Defensive Security</button>
+                    <button class="skills-tab" data-category="compliance">Compliance & Governance</button>
+                    <button class="skills-tab" data-category="technical">Technical Skills</button>
+                </div>
+                
+                <!-- Offensive Security Skills -->
+                <div class="skills-content active" data-category="offensive">
+                    <div class="skills-grid">
+                        <div class="skill-category-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-bug"></i>
+                            </div>
+                            <h3>Penetration Testing</h3>
+                            <div class="skill-bar" data-percentage="70">
+                                <div class="skill-progress"></div>
+                            </div>
+                            <ul class="skill-details">
+                                <li>Web Application Testing</li>
+                                <li>Network Infrastructure Testing</li>
+                                <li>Active Directory Testing</li>
+                                <li>Social Engineering</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="skill-category-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <h3>Vulnerability Assessment</h3>
+                            <div class="skill-bar" data-percentage="25">
+                                <div class="skill-progress"></div>
+                            </div>
+                            <ul class="skill-details">
+                                <li>Vulnerability Scanning</li>
+                                <li>Risk Assessment</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="skill-category-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3>Exploit Development</h3>
+                            <div class="skill-bar" data-percentage="25">
+                                <div class="skill-progress"></div>
+                            </div>
+                            <ul class="skill-details">
+                                <li>Reverse Engineering</li>
+                                <li>Malware Analysis</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="skill-category-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-flag"></i>
+                            </div>
+                            <h3>CTF Competitions</h3>
+                            <div class="skill-bar" data-percentage="80">
+                                <div class="skill-progress"></div>
+                            </div>
+                            <ul class="skill-details">
+                                <li>Web Exploitation</li>
+                                <li>Large Language Model</li>
+                                <li>Open Source Intelligence</li>
+                                <li>Cryptography</li>
+                                <li>Forensics</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Defensive Security Skills -->
+                <div class="skills-content" data-category="defensive">
+                    <div class="skills-grid">
+                        <div class="skill-category-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3>Security Operations</h3>
+                            <div class="skill-bar" data-percentage="85">
+                                <div class="skill-progress"></div>
+                            </div>
+                            <ul class="skill-details">
+                                <li>SIEM Implementation & Management</li>
+                                <li>Security Monitoring</li>
+                                <li>Threat Detection</li>
+                                <li>Alert Triage</li>
+                                <li>Incident Response</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="skill-category-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-network-wired"></i>
+                            </div>
+                            <h3>Network Security</h3>
+                            <div class="skill-bar" data-percentage="90">
+                                <div class="skill-progress"></div>
+                            </div>
+                            <ul class="skill-details">
+                                <li>Firewall Configuration</li>
+                                <li>IDS/IPS Management</li>
+                                <li>VPN Implementation</li>
+                                <li>Network Segmentation</li>
+                                <li>Traffic Analysis</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="skill-category-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <h3>Endpoint Security</h3>
+                            <div class="skill-bar" data-percentage="40">
+                                <div class="skill-progress"></div>
+                            </div>
+                            <ul class="skill-details">
+                                <li>EDR Solutions</li>
+                                <li>Host-based Firewalls</li>
+                                <li>Endpoint Hardening</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="skill-category-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-biohazard"></i>
+                            </div>
+                            <h3>Threat Hunting</h3>
+                            <div class="skill-bar" data-percentage="40">
+                                <div class="skill-progress"></div>
+                            </div>
+                            <ul class="skill-details">
+                                <li>IOC Development</li>
+                                <li>Behavioral Analysis</li>
+                                <li>Forensic Investigation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Compliance & Governance Skills -->
+                <div class="skills-content" data-category="compliance">
+                    <div class="skills-grid">
+                        <div class="skill-category-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-file-contract"></i>
+                            </div>
+                            <h3>Regulatory Compliance</h3>
+                            <div class="skill-bar" data-percentage="85">
+                                <div class="skill-progress"></div>
+                            </div>
+                            <ul class="skill-details">
+                                <li>GDPR</li>
+                                <li>HIPAA</li>
+                                <li>PCI DSS</li>
+                                <li>SOX</li>
+                                <li>PDPA</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="skill-category-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                            <h3>Security Frameworks</h3>
+                            <div class="skill-bar" data-percentage="65">
+                                <div class="skill-progress"></div>
+                            </div>
+                            <ul class="skill-details">
+                                <li>NIST Cybersecurity Framework</li>
+                                <li>ISO 27001/27002</li>
+                                <li>COBIT</li>
+                                <li>MITRE ATT&CK</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="skill-category-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-clipboard-check"></i>
+                            </div>
+                            <h3>Risk Management</h3>
+                            <div class="skill-bar" data-percentage="65">
+                                <div class="skill-progress"></div>
+                            </div>
+                            <ul class="skill-details">
+                                <li>Risk Assessment</li>
+                                <li>Risk Mitigation</li>
+                                <li>Risk Control</li>
+                                <li>Business Impact Analysis</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="skill-category-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <h3>Policy Development</h3>
+                            <div class="skill-bar" data-percentage="85">
+                                <div class="skill-progress"></div>
+                            </div>
+                            <ul class="skill-details">
+                                <li>Security Policies</li>
+                                <li>Standards & Procedures</li>
+                                <li>Guidelines</li>
+                                <li>Security Awareness</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Technical Skills -->
+                <div class="skills-content" data-category="technical">
+                    <div class="skills-grid">
+                        <div class="skill-category-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3>Programming Languages</h3>
+                            <div class="skill-bar" data-percentage="70">
+                                <div class="skill-progress"></div>
+                            </div>
+                            <ul class="skill-details">
+                                <li>Python</li>
+                                <li>Bash/Shell Scripting</li>
+                                <li>JavaScript</li>
+                                <li>C</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="skill-category-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <h3>Cryptography</h3>
+                            <div class="skill-bar" data-percentage="70">
+                                <div class="skill-progress"></div>
+                            </div>
+                            <ul class="skill-details">
+                                <li>Encryption Algorithms</li>
+                                <li>PKI</li>
+                                <li>Hashing</li>
+                                <li>Digital Signatures</li>
+                                <li>TLS/SSL</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools & Technologies Section -->
+        <section class="tools-section alt-bg">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Tools & Technologies</h2>
+                    <div class="underline"></div>
+                </div>
+                
+                <div class="tools-grid">
+                    <div class="tool-category">
+                        <h3>Penetration Testing</h3>
+                        <div class="tools-list">
+                            <span class="tool-item">Metasploit</span>
+                            <span class="tool-item">Burp Suite</span>
+                            <span class="tool-item">Nmap</span>
+                            <span class="tool-item">Wireshark</span>
+                            <span class="tool-item">OWASP ZAP</span>
+                            <span class="tool-item">Kali Linux</span>
+                            <span class="tool-item">Aircrack-ng</span>
+                            <span class="tool-item">Hashcat</span>
+                            <span class="tool-item">sqlmap</span>
+                            <span class="tool-item">Netexec</span>
+                        </div>
+                    </div>
+                    
+                    <div class="tool-category">
+                        <h3>Security Operations</h3>
+                        <div class="tools-list">
+                            <span class="tool-item">Splunk</span>
+                            <span class="tool-item">ELK Stack</span>
+                            <span class="tool-item">Snort</span>
+                            <span class="tool-item">Suricata</span>
+                            <span class="tool-item">Wazuh</span>
+                        </div>
+                    </div>
+                    
+                    <div class="tool-category">
+                        <h3>Cloud Security</h3>
+                        <div class="tools-list">
+                            <span class="tool-item">Azure Sentinel</span>
+                            <span class="tool-item">Docker</span>
+                            <span class="tool-item">Kubernetes</span>
+                        </div>
+                    </div>
+                    
+                    <div class="tool-category">
+                        <h3>Soft Skills</h3>
+                        <div class="tools-list">
+                            <span class="tool-item">Organization</span>
+                            <span class="tool-item">Teamwork</span>
+                            <span class="tool-item">Problem Solving</span>
+                            <span class="tool-item">Report Writing</span>
+                            <span class="tool-item">Adaptability</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Let's Work Together</h2>
+                    <p>Want to know more about me?</p>
+                    <a href="contact.html" class="btn primary-btn">Contact Me</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="../index.html">CyberSec<span>Portfolio</span></a>
+                <p>Securing the digital world, one byte at a time.</p>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-links-column">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-column">
+                    <h3>More</h3>
+                    <ul>
+                        <li><a href="achievements.html">Achievements</a></li>
+                        <li><a href="school-certifications.html">School Certifications</a></li>
+                        <li><a href="industry-certifications.html">Industry Certifications</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-column">
+                    <h3>Connect</h3>
+                    <div class="footer-social">
+                        <a href="https://github.com/Arakii0" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/arakiyeo" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year">2025</span> Araki Yeo. All Rights Reserved.</p>
+            <a href="#" class="back-to-top">
+                <i class="fas fa-arrow-up"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

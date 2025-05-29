@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Cybersecurity Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav id="navbar">
+            <div class="logo">
+                <a href="../index.html">CyberSec<span>Portfolio</span></a>
+            </div>
+            <div class="nav-toggle">
+                <span class="hamburger"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="skills.html" class="nav-link">Skills</a></li>
+                <li><a href="projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="achievements.html" class="nav-link">Achievements</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">Certifications</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="school-certifications.html">School Certifications</a></li>
+                        <li><a href="industry-certifications.html">Industry Certifications</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html" class="nav-link contact-btn">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Projects</h1>
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> / <span>Projects</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Filters Section -->
+        <section class="project-filters-section">
+            <div class="container">
+                <div class="project-filters">
+                    <button class="project-filter active" data-filter="all">All Projects</button>
+                    <button class="project-filter" data-filter="offensive">Offensive Security</button>
+                    <button class="project-filter" data-filter="defensive">Defensive Security</button>
+                    <button class="project-filter" data-filter="programming">Programming</button>
+                    <button class="project-filter" data-filter="tool">Security Tools</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Grid Section -->
+        <section class="projects-section">
+            <div class="container">
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card offensive programming" id="project1">
+                        <div class="project-img">
+                            <div class="project-img-placeholder">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Python Ransomware With Discord Webhook</h3>
+                            <p>A ransomware-like file encryption and decryption process using the cryptography.fernet library in Python. The generated encryption key is sent to a Discord webhook</p>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Symmetric Encryption</span>
+                                <span class="tag">Discord API</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn secondary-btn small-btn" target="_blank">GitHub</a>
+                                <button class="btn primary-btn small-btn project-details-btn" data-project="project1">Details</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Project Details Modal Content (Hidden) -->
+                        <div class="project-details-content" id="project1-details">
+                            <h2>Python Ransomware With Discord Webhook</h2>
+                            <div class="project-details-info">
+                                <div class="project-details-section">
+                                    <h3>Project Overview</h3>
+                                    <p>This project demonstrates a ransomware-like file encryption and decryption process using the cryptography.fernet library in Python. The script recursively encrypts all files in a specified directory (creds folder inside the user's home directory) and stores a ransom note, warning the victim about the encryption.</p>
+                                    <p>The generated encryption key is sent to a Discord webhook along with system details such as IP address, MAC address, and hostname. The decryption script allows users to enter the correct encryption key to recover their files, removing the ransom note upon successful decryption.</p>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Key Features</h3>
+                                    <ul>
+                                        <li>Encrypt one file or multiple folders recursively</li>
+                                        <li>Decryption Key sent to attacker's discord API</li>
+                                        <li>Victim's IP Address and MAC Address also sent to Attacker</li>
+                                        <li>Pre-written ransomware note written to file path of attacker's choice</li>
+                                        <li>Decryption script removes the ransomware note and decrypts folders recursively</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Technologies Used</h3>
+                                    <ul>
+                                        <li>Python for core functionality</li>
+                                        <li>Cryptography library for encryption and decryption keys</li>
+                                        <li>api.ipify.org for getting victim's IP Address</li>
+                                        <li>Discord bot to recieve decryption key and send it to attacker in Discord</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Challenges & Solutions</h3>
+                                    <p>One of the main challenges was understanding how to send the credential to my discord bot. I had to look up youtube tutorials and documentations to figure out how to create a discord bot and implement it's API into the python script.</p>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Results & Impact</h3>
+                                    <p>The ecnryption was able to encrpyt my fake confidential files and pictures, i managed to recieve the decryption key via my discord and use my decryption key to decrpyt the files. The project showcases fundamental concepts of symmetric encryption, file handling, and automation using Python.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="project-card defensive programming" id="project2">
+                        <div class="project-img">
+                            <div class="project-img-placeholder">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Python Machine learning program</h3>
+                            <p>A Machine Learning program implemented in python to detect and predict malicious websites from a list of csv files.</p>
+                            <div class="project-tags">
+                                <span class="tag">Sklearn</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">Matplotlib</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Arakii0/WebsiteML" class="btn secondary-btn small-btn" target="_blank">GitHub</a>
+                                <button class="btn primary-btn small-btn project-details-btn" data-project="project2">Details</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Project Details Modal Content (Hidden) -->
+                        <div class="project-details-content" id="project2-details">
+                            <h2>Python Machine learning program</h2>
+                            <div class="project-details-info">
+                                <div class="project-details-section">
+                                    <h3>Project Overview</h3>
+                                    <p>A Machine Learning program implemented in python to detect and predict malicious websites from a list of csv files. This project aims to develop a machine learning model capable of classifying URLs as either "Benign" (safe) or "Malicious" (potentially harmful, e.g., phishing, malware). The analysis utilizes a dataset containing various features extracted from URLs, WHOIS registration information, and associated network traffic characteristics. The primary goal demonstrated in the provided script is to meticulously clean and explore this dataset to prepare it for subsequent model training and evaluation. The target variable for classification is Type, where 0 represents Benign and 1 represents Malicious.</p>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Key Features</h3>
+                                    <ul>
+                                        <li>Handling of missing values through imputation (median) and strategic removal</li>
+                                        <li>Standardization of categorical features (Charset, Server, Country, State)</li>
+                                        <li>Exploratory Data Analysis (EDA) using statistical summaries and visualizations</li>
+                                        <li>Visualization of feature distributions, correlations, and relationships with the target variable</li>
+                                        <li>Identification of class imbalance in the target variable (Benign vs. Malicious)</li>
+                                        <li>Automated dataset profiling for quick overview and quality checks</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Technologies Used</h3>
+                                    <ul>
+                                        <li><b>Python</b> as the primary programming language</li>
+                                        <li><b>Pandas</b> for data manipulation, cleaning, and loading</li>
+                                        <li><b>Matplotlib & Seaborn</b> for data visualization (histograms, boxplots, heatmaps, etc.)</li>
+                                        <li><b>Scikit-learn</b> for machine learning utilities (preprocessing, metrics - though modeling is a next step)</li>
+                                        <li><b>Imbalanced-learn (SMOTE)</b> for addressing class imbalance (imported, planned for use)</li>
+                                        <li><b>XGBoost & SHAP</b> for advanced modeling and interpretation (imported, planned for use)</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Challenges & Solutions</h3>
+                                    <p>The primary challenges involved handling the significant amount of missing data and the inconsistency within categorical features (like server names, country codes, character sets). Solutions implemented included:
+                                        <ul>
+                                           <li>Using median imputation for numerical/date columns (`CONTENT_LENGTH`, `WHOIS_REGDATE`, `WHOIS_UPDATED_DATE`) to preserve data while filling gaps.</li>
+                                           <li>Developing custom functions to parse/standardize date formats and clean categorical data by mapping variations (e.g., 'UK'/'GB' to 'GB') and grouping infrequent categories into 'other' to reduce noise.</li>
+                                           <li>Identifying significant class imbalance through visualization, setting the stage for mitigation techniques like SMOTE in the modeling phase.</li>
+                                        </ul>
+                                    </p>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Results & Impact</h3>
+                                    <p>This initial phase resulted in a clean, well-understood, and preprocessed dataset, ready for feature engineering and machine learning modeling. The thorough cleaning and EDA provide crucial insights into feature relevance and potential issues (like imbalance), significantly improving the reliability and potential performance of subsequent malicious URL classification models. It establishes a solid foundation, preventing the "garbage in, garbage out" problem often encountered in machine learning projects.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="project-card programming" id="project3">
+                        <div class="project-img">
+                            <div class="project-img-placeholder">
+                                <i class="fas fa-flag"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>SUTD Hackathon Project</h3>
+                            <p>This was a 24 Hour Project that our team have managed to make to cater to the deaf and blind people The theme for our topic was "Inclusivity & Accessibility Tech"</p>
+                            <div class="project-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">CSS</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Arakii0/SUTD-WTH" class="btn secondary-btn small-btn" target="_blank">GitHub</a>
+                                <button class="btn primary-btn small-btn project-details-btn" data-project="project3">Details</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Project Details Modal Content (Hidden) -->
+                        <div class="project-details-content" id="project3-details">
+                            <h2>SUTD Hackathon Project</h2>
+                            <div class="project-details-info">
+                                <div class="project-details-section">
+                                    <h3>Project Overview</h3>
+                                    <p>This was a 24 Hour Project that our team have managed to make to cater to the deaf and blind people The theme for our topic was "Inclusivity & Accessibility Tech". We had to learn HTML and CSS from scratch as we did not have any prior knowlege of making website before this. We also only had less than 24 hours and we was not able to sleep as we had unfinished tasks.</p>
+                                    <p>Overall, this website/application had features to make the lives of deaf and blind people better. Features like a text to speech feature and also a ASL sign language interpreter.</p>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Key Features</h3>
+                                    <ul>
+                                        <li>Implementing a Text to speech feature in the application</li>
+                                        <li>Implementing a sign language to text feature using machine learning</li>
+                                        <li>Custom website made from scratch in 12 hours</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Technologies Used</h3>
+                                    <ul>
+                                        <li>Python for text to speech</li>
+                                        <li>HTML for the backbone of thw website</li>
+                                        <li>CSS to make the website prettier</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Challenges & Solutions</h3>
+                                    <p>A big challenge for my team was that we did not know how to code HTML and CSS when we first entered the commpetition. I was tasked with having to design and build the website. Soending the whole night without sleep, I was constantly searching the internet for tips and to gain knowledge on how to make the skeleton of the website.</p>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Results & Impact</h3>
+                                    <p>At the end of the competition, Im proud to say that the website was completed and the features were also ready to be used. Although one feature was not working at the time, I still considered it a win for us because within the span of 24 hours, Wemanaged to learn HTML, CSS and machine leaning with python.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 4 -->
+                    <div class="project-card programming" id="project4">
+                        <div class="project-img">
+                            <div class="project-img-placeholder">
+                                <i class="fas fa-c"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Shell Emmulator in C</h3>
+                            <p>A command-line shell emulator in C that mimics the functionality of a basic shell (like Bash or Command Prompt).</p>
+                            <div class="project-tags">
+                                <span class="tag">C</span>
+                                <span class="tag">Windows API</span>
+                                <span class="tag">Linux BASH</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Arakii0/Shell" class="btn secondary-btn small-btn" target="_blank">GitHub</a>
+                                <button class="btn primary-btn small-btn project-details-btn" data-project="project4">Details</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Project Details Modal Content (Hidden) -->
+                        <div class="project-details-content" id="project4-details">
+                            <h2>Shell Emmulator in C</h2>
+                            <div class="project-details-info">
+                                <div class="project-details-section">
+                                    <h3>Project Overview</h3>
+                                    <p>I developed a command-line shell emulator in C that mimics the functionality of a basic shell (like Bash or Command Prompt). The program allows users to execute various commands, such as navigating directories, listing files, reading file contents, displaying system information, and managing command history.</p>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Key Features</h3>
+                                    <ul>
+                                        <li>Built-in commands like cd, pwd, ls, cat, echo, sysinfo, and exit</li>
+                                        <li>Dynamic memory allocation for command history and error handling for invalid inputs.</li>
+                                        <li>Command parsing</li>
+                                        <li>Interact with local file system</li>
+                                        <li>Read file contents</li>
+                                        <li>Error Handling</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Technologies Used</h3>
+                                    <ul>
+                                        <li>Visual Studio Code for coding platform</li>
+                                        <li>C programming language for core components</li>
+                                        <li>Windows API to interact with the local file system and machine</li>
+                                        <li>Dynamic memory allocation using malloc</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Challenges & Solutions</h3>
+                                    <p>The main challenge was understanding the Windows API function calls. It took a long time to read many documentations on how to implement different functions and how it all links to one another. Another challenge is that C language is a very dangerous language that can lead to buffer overflow. Using safe functions like strncpy or fgets.</p>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Results & Impact</h3>
+                                    <p>This project was an excellent opportunity to deepen my understanding of system programming, Windows API, and low-level C programming. It also helped me gain hands-on experience with file handling, memory management, and command parsing.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 5 -->
+                    <div class="project-card defensive tool" id="project5">
+                        <div class="project-img">
+                            <div class="project-img-placeholder">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>SIEM Implementation & Attack Simulation</h3>
+                            <p>Created a Datadog SIEM setup, Proxmox lab, endpoints, attack simulation, log collection, rule creation, and analysis.</p>
+                            <div class="project-tags">
+                                <span class="tag">Datadog SIEM</span>
+                                <span class="tag">Suricata</span>
+                                <span class="tag">Zeek</span>
+                                <span class="tag">Attack Simulation</span>
+                                <span class="tag">Log Analysis</span>
+                                <span class="tag">Threat Detection</span>
+                            </div>
+                            <div class="project-links">
+                                <button class="btn primary-btn small-btn project-details-btn" data-project="project5">Details</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Project Details Modal Content (Hidden) -->
+                        <div class="project-details-content" id="project5-details">
+                            <h2>SIEM Implementation & Attack Simulation</h2>
+                            <div class="project-details-info">
+                                <div class="project-details-section">
+                                    <h3>Project Overview</h3>
+                                    <p>This project involved building a simulated Security Operations Center (SOC) environment using Proxmox VE virtualization and a Datadog Cloud SIEM. The primary goal was to configure log collection from diverse endpoints (Linux, Windows) and security tools (Suricata, Zeek, Cisco Secure Endpoint), simulate a wide range of cyberattacks (including DoS, Network Scanning, Brute Force, Data Exfiltration, Ransomware, Malware Infection, Reverse Shell, and ARP Poisoning), create custom detection rules and alerts within the SIEM, and analyze the resulting logs and alerts to understand and demonstrate threat detection, analysis, and response processes in a practical setting.</p>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Key Features</h3>
+                                    <ul>
+                                        <li>Virtualized Lab Environment - Proxmox</li>
+                                        <li>SIEM Implementation</li>
+                                        <li>Comprehensive Log Source Integration</li>
+                                        <li>Advanced SIEM Configuration</li>
+                                        <li>Diverse Attack Simulation</li>
+                                        <li>Threat Intelligence Application</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Technologies Used</h3>
+                                    <ul>
+                                        <li>Datadog Cloud SIEM</li>
+                                        <li>Proxmox VE 8.0.3</li>
+                                        <li>Suricata, Zeek</li>
+                                        <li>Cisco Secure Endpoint</li>
+                                        <li>Windows Event Logs, Linux Journald</li>
+                                        <li>Python (for attack/ransomware scripts), PowerShell (for ARP detection script, log configuration)</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Challenges & Solutions</h3>
+                                    <p>Configuring the log processing pipelines, particularly for the detailed JSON outputs of Zeek and Suricata, was challenging. Ensuring accurate parsing and mapping of diverse fields to Datadog's standard attributes required meticulous study of log formats, Datadog documentation, and iterative testing to achieve correct normalization for effective correlation and alerting.</p>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Results & Impact</h3>
+                                    <p>from this project, we had successfully established a functional, multi-component cybersecurity lab environment capable of simulating and analyzing cyber threats. And created effective dashboards providing centralized visibility into network traffic (Zeek), IDS alerts (Suricata), endpoint activity (CSE), and system events (Windows/Journald).</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 6 -->
+                    <div class="project-card offensive" id="project6">
+                        <div class="project-img">
+                            <div class="project-img-placeholder">
+                                <i class="fa-solid fa-cube"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>HackTheBox Seasonal Machines</h3>
+                            <p>I've completed Season 6 and 7 on HackTheBox Labs, and it was my first and second attempt at a seasonal event and I've managed to reach Silver Tier!</p>
+                            <div class="project-tags">
+                                <span class="tag">Ethical Hacking</span>
+                                <span class="tag">Active Directory</span>
+                                <span class="tag">Enumeration</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7259228799051915264/" class="btn secondary-btn small-btn" target="_blank">Linkedin</a>
+                                <button class="btn primary-btn small-btn project-details-btn" data-project="project6">Details</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Project Details Modal Content (Hidden) -->
+                        <div class="project-details-content" id="project6-details">
+                            <h2>HackTheBox Seasonal Machines</h2>
+                            <div class="project-details-info">
+                                <div class="project-details-section">
+                                    <h3>Project Overview</h3>
+                                    <p>This season taught me so much about the tools and techniques needed to effectively pen-test machines. Hack The Box continues to be a fantastic platform for sharpening my penetration testing skills and diving deep into real-world cybersecurity scenarios. This season challenged my limits and enriched my knowledge of vulnerability exploitation, network security, and threat hunting. I worked with a range of tools, from using netexec to perform RID brute-forcing on an SMB service (a technique for enumerating user accounts on a Windows system) to exploring local privilege escalation techniques using known CVEs. Whether it's dissecting complex networks or uncovering hidden vulnerabilities, each box presents a new challenge and an opportunity to grow.</p>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Key Features</h3>
+                                    <ul>
+                                        <li>Netexec to perform RID brute-forcings</li>
+                                        <li>Local privilege escalation techniques</li>
+                                        <li>Using Linpeas to enumerate weaknesses in linux to privilege escalate</li>
+                                        <li>Learning about Common CVEs present on multiple CMS</li>
+                                        <li>Improved enumeration skills and techniques and also linux file systems</li>
+                                        <li>Understanding the basic services found on windows Active Directory - Kerberos, SMB, Winrm</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Technologies Used</h3>
+                                    <ul>
+                                        <li>Netexec for brute-forcing and attempting pass the hash techniques</li>
+                                        <li>Nmap for scanning the host for open and vulnerable ports</li>
+                                        <li>evil-winrm to gain access to insecure winrm services</li>
+                                        <li>Linpeas and Winpeas to find low hanging fruits for privilege escalation</li>
+                                        <li>Manual enumerating on machines to find plain-text passwords</li>
+                                        <li>Understanding OWASP-TOP10 like XSS and SQLi for initial foothold of machine</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Challenges & Solutions</h3>
+                                    <p>A significant challenge at the start was that i did not have prior experience to this season. I was new to hacking and I did not know the tools and techniques when facing an Active Directory or just a normal linux machine with a website. Getting to understand different services was hard at the start as all the terms was new to me. but I slowly practiced my skills on retired machines and watched walkthroughs on machines by Ippsec which helped me get the hang of the machines.</p>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Results & Impact</h3>
+                                    <p>At the end, i managed to pwn most of the easy machines as it was moslty straight forward. However i was still not able to gain foothold of the medium machines as my skills and expertice is not yet in that level. I really enjoyed hacking these "real-world" machines and I hope to continue hacking in the coming future.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Let's Work Together</h2>
+                    <p>Want to know more about me?</p>
+                    <a href="contact.html" class="btn primary-btn">Contact Me</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="../index.html">CyberSec<span>Portfolio</span></a>
+                <p>Securing the digital world, one byte at a time.</p>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-links-column">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-column">
+                    <h3>More</h3>
+                    <ul>
+                        <li><a href="achievements.html">Achievements</a></li>
+                        <li><a href="school-certifications.html">School Certifications</a></li>
+                        <li><a href="industry-certifications.html">Industry Certifications</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-column">
+                    <h3>Connect</h3>
+                    <div class="footer-social">
+                        <a href="https://github.com/Arakii0" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/arakiyeo" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year">2025</span> Araki Yeo. All Rights Reserved.</p>
+            <a href="#" class="back-to-top">
+                <i class="fas fa-arrow-up"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Project Details Modal -->
+    <div class="modal" id="project-details-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <!-- Content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
