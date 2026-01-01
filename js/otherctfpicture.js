@@ -31,15 +31,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
         carouselImage.classList.add('loading'); // Start fade out effect
 
-        setTimeout(() => { // Allow fade out transition to start
+        setTimeout(() => {
             carouselImage.src = carouselImages[index];
-            carouselImage.alt = `Carousel Image ${index + 1}`; // Update alt text
+            carouselImage.alt = `Carousel Image ${index + 1}`;
 
-            // Once image is potentially loaded (or after short delay), fade in
-            // A more robust solution would use the image's 'onload' event
              setTimeout(() => {
-                 carouselImage.classList.remove('loading'); // Start fade in effect
-             }, 50); // Small delay
+                 carouselImage.classList.remove('loading');
+             }, 50);
 
             currentImageIndex = index;
 
@@ -65,7 +63,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Show modal with animation
         carouselModal.classList.add('active');
-        document.body.classList.add('modal-open'); // Prevent body scroll
         isModalOpen = true;
 
         // Add keyboard navigation listener
@@ -77,9 +74,8 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!carouselModal) return;
 
         carouselModal.classList.remove('active');
-        document.body.classList.remove('modal-open'); // Restore body scroll
         isModalOpen = false;
-
+        
         // Remove keyboard navigation listener
         document.removeEventListener('keydown', handleKeyboardNav);
 
