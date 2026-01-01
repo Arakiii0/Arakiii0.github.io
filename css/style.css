@@ -345,8 +345,8 @@ header {
 
 
 
-/* ===== HERO SECTION ===== */
-.hero-section {
+/* ===== MAIN SECTION ===== */
+.main-section {
     display: flex;
     align-items: center;
     min-height: 100vh;
@@ -355,19 +355,19 @@ header {
     overflow: hidden;
 }
 
-.hero-content {
+.main-content {
     max-width: 600px;
     z-index: 1;
 }
 
-.hero-content h1 {
+.main-content h1 {
     font-size: 3.5rem;
     color: rgb(43, 43, 238);
     margin-bottom: 10px;
     animation: fadeInUp 1s ease;
 }
 
-.hero-content h2 {
+.main-content h2 {
     font-size: 2rem;
     color: var(--secondary-color);
     margin-bottom: 20px;
@@ -375,14 +375,14 @@ header {
     animation-fill-mode: both;
 }
 
-.hero-content p {
+.main-content p {
     font-size: 1.2rem;
     margin-bottom: 30px;
     animation: fadeInUp 1s ease 0.4s;
     animation-fill-mode: both;
 }
 
-.hero-buttons {
+.main-buttons {
     display: flex;
     gap: 20px;
     margin-bottom: 30px;
@@ -408,7 +408,7 @@ header {
     transform: translateY(-5px);
 }
 
-.hero-image {
+.main-image {
     position: absolute;
     right: 0;
     top: 0;
@@ -1679,15 +1679,15 @@ footer {
         font-size: 2rem;
     }
     
-    .hero-content h1 {
+    .main-content h1 {
         font-size: 3rem;
     }
     
-    .hero-content h2 {
+    .main-content h2 {
         font-size: 1.8rem;
     }
     
-    .hero-image {
+    .main-image {
         width: 40%;
     }
     
@@ -1818,17 +1818,17 @@ footer {
         float: right;
     }
     
-    .hero-section {
+    .main-section {
         flex-direction: column;
         text-align: center;
         padding: 120px 20px 60px;
     }
     
-    .hero-content {
+    .main-content {
         max-width: 100%;
     }
     
-    .hero-buttons {
+    .main-buttons {
         justify-content: center;
     }
     
@@ -1836,7 +1836,7 @@ footer {
         justify-content: center;
     }
     
-    .hero-image {
+    .main-image {
         position: relative;
         width: 100%;
         height: 300px;
@@ -1874,16 +1874,16 @@ footer {
         font-size: 0.8rem;
     }
     
-    .hero-buttons {
+    .main-buttons {
         flex-direction: column;
         gap: 15px;
     }
     
-    .hero-content h1 {
+    .main-content h1 {
         font-size: 2.5rem;
     }
     
-    .hero-content h2 {
+    .main-content h2 {
         font-size: 1.5rem;
     }
     
@@ -2658,41 +2658,19 @@ body.modal-open {
     }
 }
 
-/* defines the overall scrollbar width */
-.custom-scrollbar-page::-webkit-scrollbar {
-    width: 75px; /* Adjust as needed */
+/* ===== GLOBAL SCROLLBAR HIDE ===== */
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
 }
 
-.custom-scrollbar-page::-webkit-scrollbar-track {
-    background: rgba(241, 245, 249, 0.8);
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
 }
 
-.custom-scrollbar-page::-webkit-scrollbar-thumb {
-    /* Use the PRE-ROTATED image */
-    background-image: url('../images/ducati.png');
-
-    /* Image display settings */
-    background-repeat: no-repeat;
-
-    /* --- Make Image 'Bigger' --- */
-    background-size: cover;
-    background-position: center center;
-}
-
-/*Rest of the page*/
-html::-webkit-scrollbar {
-    width: 5px; 
-}
-
-html::-webkit-scrollbar-track {
-    background: rgba(241, 245, 249, 0.8);
-}
-
-/* MODIFY THIS RULE */
-html::-webkit-scrollbar-thumb {
-
-    /* Image display settings */
-    background-repeat: no-repeat;
-    background-color: var(--secondary-color);
-    border-radius: 20px;
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0e1d25c7;
 }
