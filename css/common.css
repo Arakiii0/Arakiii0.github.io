@@ -472,7 +472,6 @@ footer {
 }
 
 
-
 /* ===== RESPONSIVE STYLES ===== */
 @media screen and (max-width: 1024px) {
     h1 {
@@ -718,14 +717,12 @@ footer {
     align-items: flex-start; /* Align items to the top */
 }
 
-.contact-info .section-header,
-.section-header {
+.contact-info {
     text-align: left; /* Align section headers left */
     margin-bottom: 2rem;
 }
 
-.contact-info .underline,
-.underline {
+.contact-info {
     margin: 0; /* Remove auto margin for left alignment */
     margin-bottom: 1.5rem;
 }
@@ -745,13 +742,11 @@ footer {
         gap: 40px;
     }
 
-    .contact-info .section-header,
-    .section-header {
+    .contact-info {
         text-align: center; /* Center headers when stacked */
     }
 
-    .contact-info .underline,
-    .underline {
+    .contact-info .underline{
         margin: 0 auto 1.5rem; /* Center underline when stacked */
     }
 }

@@ -1,190 +1,184 @@
-/* ===== CERTIFICATIONS SECTION ===== */
-.certifications-section {
+/* ===== ACHIEVEMENTS PAGE STYLES ===== */
+.achievements-section {
     padding: var(--section-padding);
 }
 
-.certifications-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
-    margin-top: 2rem;
-}
-
-.certification-card {
-    display: flex;
-    background-color: var(--card-bg-color);
-    border-radius: 12px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: var(--shadow-light);
-    border: 1px solid var(--border-color);
-}
-
-.certification-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-large);
-}
-
-.certification-logo {
-    flex: 0 0 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--hover-color);
-    padding: 20px;
-}
-
-.cert-logo-placeholder {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, rgba(37, 99, 235, 0.08) 0%, rgba(14, 165, 233, 0.08) 100%);
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: var(--secondary-color);
-    border: 2px solid var(--border-color);
-}
-
-.cert-logo-placeholder i {
-    font-size: 2rem;
-    margin-bottom: 5px;
-}
-
-.cert-logo-placeholder span {
-    font-size: 0.9rem;
-    font-weight: 700;
-}
-
-.certification-info {
-    flex: 1;
-    padding: 20px;
-}
-
-.certification-org {
-    color: var(--secondary-color);
-    font-weight: 600;
-    margin-bottom: 5px;
-}
-
-.certification-date {
-    font-size: 0.9rem;
-    color: var(--text-color-light);
-    margin-bottom: 15px;
-}
-
-.certification-id {
-    font-size: 0.9rem;
-    color: var(--text-color-light);
-    margin-top: 15px;
-}
-
-.certification-verify {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    margin-top: 10px;
-    font-size: 0.9rem;
-    font-weight: 600;
-}
-
-.certification-verify i {
-    font-size: 0.8rem;
-}
-
 .achievements-list {
-    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 .achievement-item {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 30px;
     background-color: var(--card-bg-color);
+    padding: 30px;
     border-radius: 12px;
-    padding: 20px;
-    box-shadow: var(--shadow-light);
     border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.achievement-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+}
+
+.achievement-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-large);
+    border-color: var(--secondary-color);
 }
 
 .achievement-icon {
-    flex: 0 0 60px;
-    height: 60px;
-    background: linear-gradient(135deg, rgba(37, 99, 235, 0.08) 0%, rgba(14, 165, 233, 0.08) 100%);
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--secondary-color);
-    font-size: 1.5rem;
-    border: 2px solid var(--border-color);
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow-medium);
 }
 
-.achievement-content {
-    flex: 1;
+.achievement-content h3 {
+    color: var(--text-color);
+    margin-bottom: 10px;
+    font-size: 1.3rem;
 }
 
 .achievement-date {
-    color: var(--secondary-color);
-    font-size: 0.9rem;
-    margin-bottom: 10px;
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+    font-weight: 600;
 }
 
+.achievement-content p {
+    color: var(--text-color-light);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
 
+.achievement-content ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
 
+.achievement-content ul li {
+    list-style: disc;
+    color: var(--text-color-light);
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
 
-  /* ===== CAROUSEL MODAL STYLES ===== */
+/* CTF Certificates Section */
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
 
-/* --- Modal Base (Leverage existing .modal styles if possible) --- */
+.certificate-card {
+    background-color: var(--background-color);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-large);
+    border-color: var(--secondary-color);
+}
+
+.certificate-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-color: var(--card-bg-color);
+}
+
+.certificate-info {
+    padding: 20px;
+}
+
+.certificate-info h3 {
+    color: var(--text-color);
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.certificate-info p {
+    color: var(--text-color-light);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Image Modal/Carousel Styles */
 .carousel-modal {
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed;
     z-index: 1050;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden; /* Prevent scroll on body (JS adds/removes class too) */
-    background-color: rgba(0, 0, 0, 0.8); /* Darker overlay */
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.8);
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.4s ease, visibility 0s linear 0.4s;
-    display: flex; /* Use flex to center content */
     align-items: center;
     justify-content: center;
 }
 
 .carousel-modal.active {
+    display: flex;
     opacity: 1;
     visibility: visible;
     transition: opacity 0.4s ease, visibility 0s linear 0s;
 }
 
-/* Prevent body scroll when modal is active */
 body.modal-open {
-  overflow: hidden;
+    overflow: hidden;
 }
 
-/* --- Modal Content Box --- */
 .carousel-modal-content {
-    background-color: var(--card-bg-color); /* Or slightly different */
+    background-color: var(--card-bg-color);
     color: var(--text-color);
     margin: auto;
-    padding: 20px; /* Base padding */
+    padding: 20px;
     border: 1px solid var(--border-color);
     border-radius: 8px;
     width: 90%;
-    max-width: 900px; /* Adjust max width as needed */
+    max-width: 900px;
     max-height: 90vh;
     position: relative;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    /* Animation for appearing */
     transform: scale(0.9) translateY(-10px);
     opacity: 0;
-    transition: transform 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28), opacity 0.3s ease-out; /* Pop effect */
-    display: flex; /* To help center content maybe */
+    transition: transform 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28), opacity 0.3s ease-out;
+    display: flex;
     flex-direction: column;
 }
 
@@ -193,7 +187,6 @@ body.modal-open {
     opacity: 1;
 }
 
-/* --- Close Button --- */
 .carousel-close-btn {
     color: var(--text-color-light);
     position: absolute;
@@ -204,7 +197,7 @@ body.modal-open {
     line-height: 1;
     cursor: pointer;
     transition: color 0.3s ease, transform 0.3s ease;
-    z-index: 10; /* Above image */
+    z-index: 10;
 }
 
 .carousel-close-btn:hover {
@@ -212,45 +205,39 @@ body.modal-open {
     transform: scale(1.1);
 }
 
-/* --- Carousel Container --- */
 .carousel-container {
-    position: relative; /* For absolute positioning arrows */
+    position: relative;
     width: 100%;
-    /* Adjust height based on content, maybe using aspect ratio */
-    aspect-ratio: 16 / 9; /* Example aspect ratio, adjust as needed */
-    overflow: hidden; /* Ensures arrows stay within bounds if needed */
-    display: flex; /* Center image */
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #000; /* Black background for images */
-    border-radius: 4px; /* Match content border-radius */
+    background-color: #000;
+    border-radius: 4px;
 }
 
-/* --- Carousel Image --- */
 .carousel-image {
     display: block;
     max-width: 100%;
-    max-height: 100%; /* Fit within container */
-    object-fit: contain; /* Scale while preserving aspect ratio */
+    max-height: 100%;
+    object-fit: contain;
     opacity: 1;
-    transition: opacity 0.5s ease-in-out; /* Fade effect */
+    transition: opacity 0.5s ease-in-out;
 }
 
-/* When loading a new image, briefly fade out */
 .carousel-image.loading {
     opacity: 0;
 }
 
-
-/* --- Navigation Arrows --- */
 .carousel-arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(10, 25, 47, 0.6); /* Semi-transparent background */
-    color: #fff; /* White arrow */
+    background-color: rgba(10, 25, 47, 0.6);
+    color: #fff;
     border: none;
-    border-radius: 50%; /* Circular arrows */
+    border-radius: 50%;
     width: 45px;
     height: 45px;
     font-size: 1.5rem;
@@ -260,9 +247,9 @@ body.modal-open {
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s ease, opacity 0.3s ease;
-    z-index: 5; /* Above image */
-    opacity: 0.7; /* Slightly transparent until hover */
-    user-select: none; /* Prevent text selection */
+    z-index: 5;
+    opacity: 0.7;
+    user-select: none;
 }
 
 .carousel-arrow:hover {
@@ -283,7 +270,6 @@ body.modal-open {
     right: 15px;
 }
 
-/* --- Image Counter --- */
 .carousel-counter {
     position: absolute;
     bottom: 10px;
@@ -297,26 +283,36 @@ body.modal-open {
     z-index: 5;
 }
 
-
-/* --- Responsive Adjustments --- */
+/* ===== RESPONSIVE - ACHIEVEMENTS PAGE ===== */
 @media screen and (max-width: 768px) {
+    .achievements-list {
+        grid-template-columns: 1fr;
+    }
+
+    .certificates-grid {
+        grid-template-columns: 1fr;
+    }
+
     .carousel-modal-content {
         width: 95%;
         padding: 15px;
     }
+
     .carousel-arrow {
         width: 35px;
         height: 35px;
         font-size: 1.2rem;
     }
+
     .prev-arrow {
         left: 10px;
     }
+
     .next-arrow {
         right: 10px;
     }
+
     .carousel-close-btn {
         font-size: 2rem;
     }
 }
-
