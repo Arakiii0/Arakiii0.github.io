@@ -1,0 +1,212 @@
+/* ===== SKILLS SECTION ===== */
+.skills-section {
+    padding: var(--section-padding);
+}
+
+/* --- Skill Tabs --- */
+.skills-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow tabs to wrap on smaller screens */
+    gap: 15px;
+    margin-bottom: 3rem; /* Space between tabs and content */
+}
+
+.skills-tab {
+    /* Inherit from .btn styles or define specific tab styles */
+    padding: 10px 25px;
+    border: 1px solid var(--border-color);
+    background-color: transparent;
+    color: var(--text-color-light);
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.skills-tab:hover {
+    background-color: var(--hover-color);
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.skills-tab.active {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-color: var(--secondary-color);
+}
+
+/* --- Skill Content Area --- */
+.skills-content {
+    display: none; /* Hide inactive tabs by default */
+    opacity: 0; /* Start hidden for transition */
+    transition: opacity 0.5s ease-in-out;
+    margin-top: 2rem; /* Ensure consistent spacing */
+}
+
+.skills-content.active {
+    display: block; /* Show the active tab content */
+    opacity: 1; /* Fade in */
+}
+
+/* --- Skills Grid --- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 30px;
+}
+
+/* --- Skill Category Card --- */
+.skill-category-card {
+    background-color: var(--card-bg-color);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left; /* Align text left for lists */
+}
+
+.skill-category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Subtle shadow on hover */
+}
+
+.skill-category-card h3 {
+    margin-top: 15px; /* Space after icon */
+    margin-bottom: 15px;
+    color: var(--text-color);
+    font-size: 1.3rem;
+}
+
+.skill-icon {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(100, 255, 218, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-color);
+    font-size: 1.8rem;
+    margin-bottom: 10px; /* Consistent spacing */
+}
+
+/* --- Skill Bar --- */
+.skill-bar {
+    width: 100%;
+    height: 12px; /* Slightly thicker bar */
+    background-color: var(--hover-color); /* Darker background for contrast */
+    border-radius: 6px;
+    overflow: hidden; /* Contain the progress */
+    margin-bottom: 15px; /* Space before details list */
+}
+
+.skill-progress {
+    height: 100%;
+    width: 0%; /* Initial state for JS animation */
+    background-color: var(--secondary-color);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align percentage text to the right */
+    color: var(--primary-color);
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding-right: 5px; /* Padding for percentage text */
+    transition: width 1.2s ease-out; /* Smooth animation */
+    white-space: nowrap; /* Prevent percentage text wrapping */
+}
+
+/* --- Skill Details List --- */
+.skill-details {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 15px;
+}
+
+.skill-details li {
+    color: var(--text-color-light);
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px; /* Space for custom bullet */
+}
+
+/* Custom bullet using pseudo-element */
+.skill-details li::before {
+    content: '\2022'; /* Bullet character */
+    /* Or use FontAwesome: content: '\f058'; font-family: 'Font Awesome 6 Free'; font-weight: 900; */
+    color: var(--secondary-color);
+    position: absolute;
+    left: 0;
+    top: 1px; /* Adjust vertical alignment */
+    font-size: 0.8em; /* Adjust bullet size */
+}
+
+
+/* ===== TOOLS & TECHNOLOGIES SECTION ===== */
+.tools-section {
+    padding: var(--section-padding);
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px; /* Increased gap between categories */
+}
+
+.tool-category h3 {
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    border-bottom: 2px solid var(--border-color); /* Underline for category title */
+    padding-bottom: 10px;
+}
+
+.tools-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px; /* Gap between tool items */
+}
+
+.tool-item {
+    background-color: var(--card-bg-color); /* Match card background */
+    color: var(--text-color-light); /* Lighter text */
+    padding: 6px 15px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid var(--border-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tool-item:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-color: var(--secondary-color);
+}
+
+
+
+/* ===== Responsive Adjustments (Example) ===== */
+@media screen and (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr; /* Stack skill cards */
+    }
+
+    .tools-grid {
+         grid-template-columns: 1fr; /* Stack tool categories */
+    }
+
+    .skill-category-card {
+        padding: 20px;
+    }
+
+     .skills-tab {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+
